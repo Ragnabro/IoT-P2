@@ -22,9 +22,30 @@ def getLastData():
 def main():
     return render_template('index.html')
 
-@app.route('/background_process_test')
-def background_process_test():
-    print ("Hello")
+@app.route('/option1') # 0-2 grader (fisk)
+def option1():
+    print ("Setting prefered temperature to 0-2 degrees")
+    # for row in curs.execute("SELECT * FROM tempData ORDER BY timestamp DESC LIMIT 1"):
+    #     dataTime = str(row[0])
+    #     dataTemp = row[1]
+    # if dataTemp > 2:
+    #     # start blæsere
+    #     print("Cooling")
+    # elif dataTemp < 0:
+    #     # start varmeelement
+    #     print("Heating")
+    # else:
+    #     return dataTime, dataTemp
+    return ("nothing")
+
+@app.route('/option2') # 3-5 grader (mælk)
+def option2():
+    print ("Setting prefered temperature to 3-5 degrees")   
+    return ("nothing")
+
+@app.route('/option3') # 6-8 grader (grønt)
+def optionp3():
+    print ("Setting prefered temperature to 6-8 degrees")
     return ("nothing")
 
 
